@@ -1,0 +1,15 @@
+PerformanceCEO is a mod that can significantly increase performance in Airport CEO, expecially in modded saves. This can be observed in a considerable decrease in RAM and VRAM usage while in game.
+
+-- Settings --
+All modules are on by default, getting you the best experience possible. If nessesary, modules can be disabled.
+
+* RAM Usage Reduction Module 
+This module reduces RAM usage while in game considerably when you have modded airlines in a save
+
+* VRAM Usage Reduction Module
+This module reduces VRAM usage while in game considerably. This removes crashes when loading the game, but in very very rare cases may cause crashes while in-game at large airports. It is suggested to have autosave on when this is in use.
+
+* Log Additional Debug Information
+This makes the mod log additional information for debugging. Please have this enabled if you are testing the mod for bugs!
+
+Mod by Humoresque
