@@ -1,13 +1,16 @@
 using UnityEngine;
 using HarmonyLib;
 using System;
+using System.Reflection;
+using UModFramework;
 
 namespace PerformanceCEO.RAMReducer
 {
 
-    static class RAMReducerManager
+    public static class RAMReducerManager
     {
         public static bool LiveryImporterCall = false;
+        public static bool TweaksAircraftCall = false; //set by tweaks
     }
 
     [HarmonyPatch(typeof(LiveryImporter))]
@@ -28,7 +31,7 @@ namespace PerformanceCEO.RAMReducer
     {
         public static void Prefix(ref Texture2D texture)
         {
-            if (RAMReducerManager.LiveryImporterCall == false || !texture.isReadable || !PerformanceCEOConfig.RAMReductionModuleEnabled)
+            if ((RAMReducerManager.LiveryImporterCall && RAMReducerManager.TweaksAircraftCall == false) || !texture.isReadable || !PerformanceCEOConfig.RAMReductionModuleEnabled)
             {
                 return;
             }
@@ -43,5 +46,5 @@ namespace PerformanceCEO.RAMReducer
                 PerformanceCEO.Log($"Error occured while reducing RAM usage (Patch_RAMReducerApplier). Error: {ex.Message}");
             }
         }
-    }
+    }  
 }

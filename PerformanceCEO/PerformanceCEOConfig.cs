@@ -28,7 +28,7 @@ namespace PerformanceCEO
 
                     cfg.Write("SupportsHotLoading", new UMFConfigBool(false)); //Uncomment if your mod can't be loaded once the game has started.
                     cfg.Write("ModDependencies", new UMFConfigStringArray(new string[] { "" })); //A comma separated list of mod/library names that this mod requires to function. Format: SomeMod:1.50,SomeLibrary:0.60
-                    cfg.Read("LoadPriority", new UMFConfigString("Normal"));
+                    cfg.Read("LoadPriority", new UMFConfigString("High"));
                     cfg.Write("MinVersion", new UMFConfigString("0.53.7"));
                     cfg.Write("MaxVersion", new UMFConfigString("0.54.99999.99999")); //This will prevent the mod from being loaded after the next major UMF release
                     cfg.Write("UpdateURL", new UMFConfigString(""));
